@@ -66,6 +66,13 @@ Test: checkPrice method should now add up the prices of all the toppings and add
 Code: myPizza.checkPrice()
 <br>
 Expect: myPizza = Pizza {price: (total),toppings:[], toppingsList: [available]}
+<br>
+<br>
+Test: Pizza constructor should now include size 
+<br>
+Code: myPizza(toppings, size)
+<br>
+Expect: myPizza = Pizza {toppings:[],size: "size"}
 
 <br>
 <br>

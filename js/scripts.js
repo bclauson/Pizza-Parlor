@@ -3,9 +3,10 @@ function Topping(toppingName, toppingPrice) {
   this.price = toppingPrice;
 }
 
-function Pizza(toppings) {
+function Pizza(toppings, size) {
   this.price = 0;
   this.toppings = toppings;
+  this.size = size;
 }
 
 Pizza.prototype.toppingGenerate = function() {
@@ -24,7 +25,13 @@ Pizza.prototype.toppingGenerate = function() {
 Pizza.prototype.checkPrice = function() {
   let pizzaToppings = this.toppings;
   let addPrice = 0;
-
+  if (this.size === "large") {
+    addPrice += 20.00;
+  } else if (this.size === "medium") {
+    addPrice += 15.00;
+  } else if (this.size === "small") {
+    addPrice += 10.00;
+  }
   this.toppingsList.forEach(function(element) {
     if (pizzaToppings.includes(element.name)) {
       addPrice += element.price;
@@ -43,7 +50,7 @@ $(document).ready(function(){
     $.each($("input[name='toppings']:checked"), function(element) {
       toppingsSubmitted.push($(this).val());
     });
-    myPizza = new Pizza(toppingsSubmitted);
+    myPizza = new Pizza(toppingsSubmitted, "small");
     myPizza.toppingGenerate();
     myPizza.checkPrice();
 
