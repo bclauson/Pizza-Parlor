@@ -52,6 +52,17 @@ Test: it should create a pizza object with property for toppings
 Code: myPizza = new Pizza(["pepperoni", "olives"])
 <br>
 Expect: myPizza = Pizza {toppings: ["pepperoni", "olives"]}
+<br>
+<br>
+Test: prototype toppingGenerate should create a property containing list of available toppings
+<br>
+Code: myPizza.toppingGenerate()
+<br>
+Expect: myPizza = Pizza {toppings:[],toppingsList: [available toppings]}
+
+<br>
+<br>
+<br>
 
 **Describe: Topping(toppingName, toppingPrice);** 
 <br>

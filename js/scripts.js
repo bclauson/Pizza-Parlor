@@ -7,3 +7,16 @@ function Pizza(toppings) {
   this.price = 0;
   this.toppings = toppings;
 }
+
+Pizza.prototype.toppingGenerate = function() {
+  this.toppingsList = 
+  (
+    [new Topping("pepperoni", 2.25),
+    new Topping("sausage", 2.00),
+    new Topping("chicken", 1.75),
+    new Topping("olives", 1.00),
+    new Topping("jalapenos", 0.75),
+    new Topping("mushrooms", 0.50),
+    ]
+  )
+}
