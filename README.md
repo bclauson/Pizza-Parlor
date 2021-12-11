@@ -59,6 +59,13 @@ Test: prototype toppingGenerate should create a property containing list of avai
 Code: myPizza.toppingGenerate()
 <br>
 Expect: myPizza = Pizza {toppings:[],toppingsList: [available toppings]}
+<br>
+<br>
+Test: checkPrice method should now add up the prices of all the toppings and add them together
+<br>
+Code: myPizza.checkPrice()
+<br>
+Expect: myPizza = Pizza {price: (total),toppings:[], toppingsList: [available]}
 
 <br>
 <br>
