@@ -51,4 +51,12 @@ Test: it should create a pizza object with property for toppings
 <br>
 Code: myPizza = new Pizza(["pepperoni", "olives"])
 <br>
-Expect: Pizza {toppings: ["pepperoni", "olives"]}
+Expect: myPizza = Pizza {toppings: ["pepperoni", "olives"]}
+
+**Describe: Topping(toppingName, toppingPrice);** 
+<br>
+Test: it should create a topping object with property for name and price.
+<br>
+Code: Topping = new Topping("pepperoni",2.00)
+<br>
+Expect: Topping = Topping {toppingName: "pepperoni", toppingPrice = 2.00}
