@@ -1,0 +1,10 @@
+input {
+  vertical-align: middle;
+  position: relative;
+}
+
+.buttonContainer {
+  justify-content: center;
+  display: flex;
+}
+

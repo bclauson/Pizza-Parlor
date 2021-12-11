@@ -24,16 +24,30 @@ Pizza.prototype.toppingGenerate = function() {
 Pizza.prototype.checkPrice = function() {
   let pizzaToppings = this.toppings;
   let addPrice = 0;
-  console.log(this.toppings)
+
   this.toppingsList.forEach(function(element) {
-    console.log(this.toppings);
     if (pizzaToppings.includes(element.name)) {
-      console.log(element);
       addPrice += element.price;
     }
   });
-  return this.price += addPrice;
+  this.price += addPrice;
 }
 
 test = new Pizza(["pepperoni", "olives"]);
 test.toppingGenerate();
+
+$(document).ready(function(){
+  $("form#submit").submit(function(event){
+    event.preventDefault();
+    let toppingsSubmitted = [];
+    $.each($("input[name='toppings']:checked"), function(element) {
+      toppingsSubmitted.push($(this).val());
+    });
+    myPizza = new Pizza(toppingsSubmitted);
+    myPizza.toppingGenerate();
+    myPizza.checkPrice();
+
+    $(".result").html("Your total is $" + myPizza.price + " thank you!");
+  });
+
+});
