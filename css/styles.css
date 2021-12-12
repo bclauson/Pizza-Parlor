@@ -1,8 +1,15 @@
 
+.container {
+  float: left;
+  display:contents;
+
+}
+
 
 .buttonContainer {
   justify-content: center;
   display: flex;
+
 }
 
 
@@ -11,3 +18,9 @@ body {
   color: rgb(255, 194, 125)
 }
 
+.result {
+  padding-top: 100px;
+  justify-content: center;
+  display: flex;
+  
+}

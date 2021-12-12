@@ -1,3 +1,5 @@
+
+//Buisness logic
 function Topping(toppingName, toppingPrice) {
   this.name = toppingName;
   this.price = toppingPrice;
@@ -40,9 +42,7 @@ Pizza.prototype.checkPrice = function() {
   this.price += addPrice;
 }
 
-test = new Pizza(["pepperoni", "olives"]);
-test.toppingGenerate();
-
+//UI Logic
 $(document).ready(function(){
   $("form#submit").submit(function(event){
     event.preventDefault();
