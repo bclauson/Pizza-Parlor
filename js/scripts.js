@@ -6,7 +6,7 @@ function Topping(toppingName, toppingPrice) {
 }
 
 function Pizza(toppings, size) {
-  this.price = 0;
+  this.price = 0.00;
   this.toppings = toppings;
   this.size = size;
 }
@@ -40,6 +40,7 @@ Pizza.prototype.checkPrice = function() {
     }
   });
   this.price += addPrice;
+  this.price = this.price.toFixed(2);
 }
 
 //UI Logic
