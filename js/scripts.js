@@ -47,10 +47,11 @@ $(document).ready(function(){
   $("form#submit").submit(function(event){
     event.preventDefault();
     let toppingsSubmitted = [];
+    const size = $("input:radio[name=size]:checked").val();
     $.each($("input[name='toppings']:checked"), function(element) {
       toppingsSubmitted.push($(this).val());
     });
-    myPizza = new Pizza(toppingsSubmitted, "small");
+    myPizza = new Pizza(toppingsSubmitted, size);
     myPizza.toppingGenerate();
     myPizza.checkPrice();
 
